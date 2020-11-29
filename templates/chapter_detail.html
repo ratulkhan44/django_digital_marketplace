@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block head_title %}
+Digital Marketplace
+{% endblock head_title %}
+
+{% block breadcrumb %}
+<li class="breadcrumb-item"><a href="{% url 'books:book_list' %}">Book List</a></li>
+<li class="breadcrumb-item"><a href="{{ chapter.book.get_absolute_url }}">{{chapter.book.title}}</a></li>
+<li class="breadcrumb-item active" aria-current="page">{{chapter}}</li>
+{% endblock breadcrumb %}
+
+{% block content %}
+<h1>Chapter Detail</h1>
+<p>{{chapter.title}}</p>
+<p>This Chapter falls under <a href="{{ chapter.book.get_absolute_url }}">{{chapter.book.title}}</a></p>
+<h4>Exercise:</h4>
+<ul>
+    {% for exercise in chapter.exercise_set.all %}
+    <li><a href="{{ exercise.get_absolute_url }}">{{exercise.title}}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}

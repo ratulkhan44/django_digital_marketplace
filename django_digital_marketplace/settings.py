@@ -66,7 +66,7 @@ WSGI_APPLICATION = 'django_digital_marketplace.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': str(BASE_DIR / 'db.sqlite3'),
     }
 }
 
@@ -112,4 +112,3 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = [BASE_DIR/'static']
 STATIC_ROOT = BASE_DIR/'static_root'
 MEDIA_ROOT = BASE_DIR/'media_root'
-

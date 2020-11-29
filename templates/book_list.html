@@ -1,14 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book List</title>
-</head>
-<body>
-    <h1>Book List</h1>
-    {% for book in queryset %}
-      <p>{{book.title}}</p>
-    {% endfor %}
-</body>
-</html>
+{% extends "base.html" %}
+{% block head_title %}
+Digital Marketplace
+{% endblock head_title %}
+
+{% block breadcrumb %}
+<li class="breadcrumb-item active" aria-current="page">Book List</li>
+{% endblock breadcrumb %}
+
+{% block content %}
+{% for book in queryset %}
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{book.title}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{book.publication_date}}</h6>
+        <p class="card-text">
+            {% for author in book.authors.all %}
+            <span>{{author}}</span>
+            {% if book.authors.count > 1 %} | {% endif %}
+            {% endfor %}
+        </p>
+        <a href="{{ book.get_absolute_url }}" class="card-link">{{book}}</a>
+    </div>
+</div>
+
+{% endfor %}
+{% endblock content %}
