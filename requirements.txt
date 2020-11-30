@@ -1,55 +1,36 @@
-
-Usage:   
-  pip <command> [options]
-
-Commands:
-  install                     Install packages.
-  download                    Download packages.
-  uninstall                   Uninstall packages.
-  freeze                      Output installed packages in requirements format.
-  list                        List installed packages.
-  show                        Show information about installed packages.
-  check                       Verify installed packages have compatible dependencies.
-  config                      Manage local and global configuration.
-  search                      Search PyPI for packages.
-  cache                       Inspect and manage pip's wheel cache.
-  wheel                       Build wheels from your requirements.
-  hash                        Compute hashes of package archives.
-  completion                  A helper command used for command completion.
-  debug                       Show information useful for debugging.
-  help                        Show help for commands.
-
-General Options:
-  -h, --help                  Show help.
-  --isolated                  Run pip in an isolated mode, ignoring
-                              environment variables and user configuration.
-  -v, --verbose               Give more output. Option is additive, and can be
-                              used up to 3 times.
-  -V, --version               Show version and exit.
-  -q, --quiet                 Give less output. Option is additive, and can be
-                              used up to 3 times (corresponding to WARNING,
-                              ERROR, and CRITICAL logging levels).
-  --log <path>                Path to a verbose appending log.
-  --proxy <proxy>             Specify a proxy in the form
-                              [user:passwd@]proxy.server:port.
-  --retries <retries>         Maximum number of retries each connection should
-                              attempt (default 5 times).
-  --timeout <sec>             Set the socket timeout (default 15 seconds).
-  --exists-action <action>    Default action when a path already exists:
-                              (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort.
-  --trusted-host <hostname>   Mark this host or host:port pair as trusted,
-                              even though it does not have valid or any HTTPS.
-  --cert <path>               Path to alternate CA bundle.
-  --client-cert <path>        Path to SSL client certificate, a single file
-                              containing the private key and the certificate
-                              in PEM format.
-  --cache-dir <dir>           Store the cache data in <dir>.
-  --no-cache-dir              Disable the cache.
-  --disable-pip-version-check
-                              Don't periodically check PyPI to determine
-                              whether a new version of pip is available for
-                              download. Implied with --no-index.
-  --no-color                  Suppress colored output
-  --no-python-version-warning
-                              Silence deprecation warnings for upcoming
-                              unsupported Pythons.
+appdirs==1.4.4
+asgiref==3.2.7
+astroid==2.3.3
+autopep8==1.5
+certifi==2020.11.8
+cffi==1.14.4
+chardet==3.0.4
+colorama==0.4.3
+cryptography==3.2.1
+defusedxml==0.6.0
+distlib==0.3.1
+Django==3.0.6
+django-allauth==0.44.0
+django-crispy-forms==1.9.0
+django-formtools==2.2
+filelock==3.0.12
+idna==2.10
+isort==4.3.21
+lazy-object-proxy==1.4.3
+mccabe==0.6.1
+mysqlclient @ file:///E:/My%20Projects/Django%20Projects/django-erp/django-erp/mysqlclient-1.4.6-cp38-cp38-win32.whl
+oauthlib==3.1.0
+Pillow==8.0.1
+pycodestyle==2.5.0
+pycparser==2.20
+PyJWT==1.7.1
+pylint==2.4.4
+python3-openid==3.2.0
+pytz==2020.1
+requests==2.25.0
+requests-oauthlib==1.3.0
+six==1.14.0
+sqlparse==0.3.1
+urllib3==1.26.2
+virtualenv==20.0.31
+wrapt==1.11.2

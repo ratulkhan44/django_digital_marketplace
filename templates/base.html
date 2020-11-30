@@ -13,6 +13,7 @@
 
 <body>
     <div class="container">
+        {% include "navbar.html" %}
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 {% block breadcrumb %}
@@ -20,6 +21,16 @@
                 {% endblock breadcrumb %}
             </ol>
         </nav>
+        {% if messages %}
+        <div>
+            <strong>Messages:</strong>
+            <ul>
+                {% for message in messages %}
+                <li>{{message}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
         {% block content %}
 
         {% endblock content %}
