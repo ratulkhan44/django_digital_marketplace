@@ -137,3 +137,9 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 LOGIN_REDIRECT_URL = '/'
 
 SITE_ID = 1
+
+
+# stripe settings
+
+STRIPE_PUBLIC_KEY = ''
+STRIPE_SECRET_KEY = ''
