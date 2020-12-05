@@ -2,10 +2,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
+from core.views import profile_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
+    path('account/profile/', profile_view,name='profile_view'),
     path('', include('books.urls', namespace='books')),
     path('cart/', include('shopping_cart.urls', namespace='cart')),
 ]

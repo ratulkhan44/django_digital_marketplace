@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, Http404
 from .models import Book, Chapter, Exercise
 from shopping_cart.models import Order, OrderItem
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 OWNED = 'owned'
@@ -29,7 +30,7 @@ def check_book_relationship(request, book):
                 return IN_CART
     return NOT_IN_CART
 
-
+@login_required
 def book_detail(request, slug):
     book = get_object_or_404(Book, slug=slug)
     book_status = check_book_relationship(request, book)

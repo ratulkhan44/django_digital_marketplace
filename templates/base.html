@@ -23,16 +23,7 @@
                 {% endblock breadcrumb %}
             </ol>
         </nav>
-        {% if messages %}
-        <div>
-            <strong>Messages:</strong>
-            <ul>
-                {% for message in messages %}
-                <li>{{message}}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
+        {% include "messages.html" %}
         {% block content %}
 
         {% endblock content %}

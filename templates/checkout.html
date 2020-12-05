@@ -12,7 +12,7 @@ Digital Marketplace
 
 <script src="https://js.stripe.com/v3/"></script>
 
-<form action="." method="post" id="payment-form">
+<form action="{% url 'cart:checkout' %}" method="post" id="payment-form">
     {% csrf_token %}
     <div class="stripe-form-row">
         <label for="card-element" class="stripe-label">
@@ -36,12 +36,9 @@ Digital Marketplace
         <div id="card-errors" role="alert"></div>
     </div>
 
-    <button>Submit Payment</button>
+    <button type="submit">Submit Payment</button>
 </form>
-<script type="text/javascript" src="/javascripts/jquery-3.1.1.min.js"></script>
 
-<scrip type="text/javascript" src="{% static 'js/stripe-form.js' %}">
-    </script>
+<script src="{% static 'js/stripe-form.js' %}"></script>
 
-
-    {% endblock content %}
+{% endblock content %}
