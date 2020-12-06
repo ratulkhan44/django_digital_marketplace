@@ -4,8 +4,12 @@ Digital Marketplace
 {% endblock head_title %}
 
 {% block breadcrumb %}
-<li class="breadcrumb-item"><a href="{% url 'books:book_list' %}">Book List</a></li>
-<li class="breadcrumb-item active" aria-current="page">{{book.title}}</li>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'books:book_list' %}">Book List</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{book.title}}</li>
+    </ol>
+</nav>
 {% endblock breadcrumb %}
 
 {% block content %}

@@ -20,7 +20,7 @@ def book_list(request):
 def check_book_relationship(request, book):
     if book in request.user.userlibrary.books.all():
         return OWNED
-    order_qs = Order.objects.filter(user=request.user)
+    order_qs = Order.objects.filter(user=request.user, is_ordered=False)
     if order_qs.exists():
         order = order_qs[0]
         order_item_qs = OrderItem.objects.filter(book=book)
@@ -29,6 +29,7 @@ def check_book_relationship(request, book):
             if order_item in order.items.all():
                 return IN_CART
     return NOT_IN_CART
+
 
 @login_required
 def book_detail(request, slug):

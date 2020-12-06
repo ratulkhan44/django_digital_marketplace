@@ -5,12 +5,17 @@ Digital Marketplace
 {% endblock head_title %}
 
 {% block breadcrumb %}
-<li class="breadcrumb-item"><a href="{% url 'books:book_list' %}">Book List</a></li>
-<li class="breadcrumb-item"><a href="{{ exercise.chapter.book.get_absolute_url }}">{{exercise.chapter.book.title}}</a>
-</li>
-<li class="breadcrumb-item"><a href="{{ exercise.chapter.get_absolute_url }}">{{exercise.chapter.title}}</a>
-</li>
-<li class="breadcrumb-item active" aria-current="page">{{exercise.title}}</li>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'books:book_list' %}">Book List</a></li>
+        <li class="breadcrumb-item"><a
+                href="{{ exercise.chapter.book.get_absolute_url }}">{{exercise.chapter.book.title}}</a>
+        </li>
+        <li class="breadcrumb-item"><a href="{{ exercise.chapter.get_absolute_url }}">{{exercise.chapter.title}}</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">{{exercise.title}}</li>
+    </ol>
+</nav>
 {% endblock breadcrumb %}
 
 {% block content %}
