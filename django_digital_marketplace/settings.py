@@ -11,9 +11,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '%-#64=vcik+ryf-fw$bu0wh#(6**=zet#yrugyukmm77_*&_c1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-digital-marketplace.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -142,5 +142,5 @@ SITE_ID = 1
 
 # stripe settings
 
-STRIPE_PUBLIC_KEY = ''
-STRIPE_SECRET_KEY = ''
+STRIPE_PUBLIC_KEY = 'pk_test_51Hu9NQBDxIhqBJpO6wiam8hUTGLEUSUbb3xVCpGuNBCBNpKsKit9L2odyC2fq5OnR36XjEmxOEaGFPsIPaauuq3z000Ds1EzAw'
+STRIPE_SECRET_KEY = 'sk_test_51Hu9NQBDxIhqBJpOMM3lljwuwZZ9tiQ6JRDlduS3FbqJwdoWYqdbSpne78AgaGJQ9hSJMYxwHrTJOuSWnYcyZZ3L000ncf1Z02'

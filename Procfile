@@ -1,0 +1,1 @@
+web: gunicorn django_digital_marketplace.wsgi --log-file -
