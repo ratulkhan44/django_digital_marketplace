@@ -1,4 +1,4 @@
-var stripe = Stripe('pk_test_51Hu9NQBDxIhqBJpO6wiam8hUTGLEUSUbb3xVCpGuNBCBNpKsKit9L2odyC2fq5OnR36XjEmxOEaGFPsIPaauuq3z000Ds1EzAw');
+var stripe = Stripe('');
 
 // Create an instance of Elements.
 var elements = stripe.elements();
